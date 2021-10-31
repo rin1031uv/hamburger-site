@@ -1,0 +1,24 @@
+/*========================================
+共通部分
+==========================================*/
+
+html *,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}

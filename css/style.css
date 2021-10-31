@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*========================================
+共通部分
+==========================================*/
+html *,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**************************
+読み込み
+***************************/
+/**************************
+ヘッダーメニュー
+***************************/
+.p-Header__wrapper {
+  position: relative;
+  background-color: #f2ede9;
+  height: 217px;
+}
+.p-Header__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.c-Header__title {
+  color: #707070;
+  text-align: center;
+}
+.c-Header__nav-btn-menu {
+  background-color: #f2ede9;
+  color: #707070;
+  border: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.p-Search__container {
+  text-align: center;
+}
+.p-Search__container input {
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+.menu-nav li {
+  text-align: center;
+  margin: 2rem 0;
+}
+.menu-nav li a {
+  display: block;
+}
+
+/**************************
+メイン
+***************************/
+.c-Hero img {
+  width: 100%;
+}
+
+.l-Card__wrapper {
+  margin: 5%;
+}
+@media screen and (min-width:834px) {
+  .l-Card__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+  }
+}
+
+.p-Card__container {
+  margin-left: 2%;
+}
+.p-Card__sub-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+}
+.p-Card__sub-container {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: calc(100% - 21px);
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  height: 163px;
+}
+@media screen and (min-width:834px) {
+  .p-Card__sub-container {
+    height: auto;
+  }
+}
+
+.c-Card__img {
+  position: relative;
+}
+.c-Card__img img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+.c-Card__title {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #88abe0;
+}
+.c-Card__txt {
+  padding: 20px 0;
+}
+
+/**************************
+地図部分
+***************************/
+.c-Access-wrapper {
+  background-image: url(../images/map.png);
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.c-Access-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+}
+@media screen and (min-width:834px) {
+  .c-Access-wrapper::before {
+    bottom: 0;
+  }
+}
+@media screen and (min-width:1280px) {
+  .c-Access-wrapper::before {
+    right: 50%;
+  }
+}
+.c-Access-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.c-Access-title {
+  color: #707070;
+}
+.c-Access-txt {
+  padding: 5rem;
+}
+
+/**************************
+フッター
+***************************/
+.l-Footer-wrapper {
+  text-align: center;
+  background-image: url(../images/footer-background.png);
+  background-size: cover;
+  background-position: center top;
+  height: 150px;
+}
+.l-Footer-container {
+  height: 150px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.l-Footer-list {
+  display: inline-block;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.l-Footer-list-item + li::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 50%;
+  height: 14px;
+  margin-top: -7px;
+  border-right: 1px solid #707070;
+}
+.l-Footer-list-item a {
+  padding: 10px;
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
