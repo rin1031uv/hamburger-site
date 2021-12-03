@@ -10,31 +10,50 @@
 /**************************
 ヘッダーメニュー
 ***************************/
+.l__Wrapper {
+  position: relative; //p-Header__navに対する親
+  @include mixin.mq(l) {
+  display: flex;
+  height: 100%;
+  }
+}
+
+.p__Container {
+  @include mixin.mq(l){
+  width: calc(100% - 356px);
+  height: 100%;
+  }
+}
 .p-Header {
   &__wrapper {
-    position: relative;
-    background-color: #f2ede9;
     height: 217px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff7ef;
+    @include mixin.mq(l) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
   }
   &__container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+    @include mixin.mq(l) {
+      width: 74%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 .c-Header {
   &__title {
-    color: #707070;
+    color: #707070; //ここには色かかない
     text-align: center;
-  }
-  &__nav-btn-menu {
-    background-color: #f2ede9;
-    color: #707070;
-    border: none;
-    position: absolute;
-    top: 12px;
-    right: 12px;
   }
 }
 
@@ -48,46 +67,141 @@
   }
 }
 
+.c-Serch {
+  &__input-field {
+    padding: 5px 15px;
+  }
+  &__btn {
+    padding: 5px 15px;
+  }
+}
+/**************************
+サブメニュー
+***************************/
+.p-Sidebar {
+  &__layer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    width: 0; //非表示
+    transition: .5s;
+    background-color: #707070;
+    @include mixin.mq(l) {
+      display: none;
+    }
+  }
+  &__nav {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    width: 0; //非表示
+    transition: .5s;
+    font-size: 1.75rem;
+    @include mixin.mq(l) {
+      width: 356px;
+      height: 100%;
+    }
+  }
+}
+.c-Sidebar {
+  &__nav-btn-menu {
+    background-color: transparent;//ボタン背景透明
+    color: #707070;
+    border: none;
+    height: 32px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    font-size: 3rem;
+    @include mixin.mq(l) {
+    right: 256px;
+    z-index: 100;
+    }
+  }
+  &__List {
+    font-size: 2.4rem;
+    &Item {
+      font-size: 2rem;
+      padding-left: 20px;
+    }
+  }
+}
 .menu-nav {
-  display: none; //いったん非表示
+  width: calc(100vw - 47px);
+  height: 100%;
+  margin-left: auto;
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
+  background-color: #fff7ef;
+  padding: 80px 30px;
+  @include mixin.mq(l) {
+    display: block;
+    width: 356px;
+    height: 100%;
+  }
   li {
-    text-align: center;
     margin: 2rem 0;
+    list-style: none;
     a {
       display: block;
     }
   }
 }
+
+.open-menu {
+  width: 100vw;
+  height: 100%;
+  background-color: #707070;
+  @include mixin.mq(l) {
+    display: none;
+  }
+}
+
 /**************************
 メイン
 ***************************/
 .c-Hero {
   img {
   width: 100%;
+  height: 285px;
+  object-fit: cover;
+  @include mixin.mq(l) {
+    height: 530px;
+    object-fit: cover;
+  }
   }
 }
 
-//conpornent
+/*
+カード
+***************************/
 .l-Card {
   &__wrapper {
-    margin: 5%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     @include mixin.mq() {
       display: flex;
+      justify-content: center;
       height: auto;
+      width: 100%;
     }
   }
 }
 .p-Card {
   &__container {
-    margin-left: 2%;
+    width: 100%;
+    padding: 20px;
   }
   &__sub-wrapper {
     width: 100%;
-    height: 100%;
+    height: 285px;
     position: absolute;
     top: 50%;
   }
@@ -98,7 +212,6 @@
     margin: 0 auto;
     margin-bottom: 10px;
     padding: 10px;
-    height: 163px; 
     @include mixin.mq() {
       height: auto;
     }
@@ -111,6 +224,14 @@
       display: block;
       margin: 0 auto;
       width: 100%;
+      height: 642px;
+      object-fit: cover;
+      @include mixin.mq() {
+        height: 681px;
+      }
+      @include mixin.mq(l) {
+        height: 1193px;
+      }
     }
   }
   &__title {
@@ -118,21 +239,41 @@
     top: 0;
     left: 20px;
     color: #88abe0;
+    font-size: 25px;
   }
   &__txt {
-    padding: 20px 0;
+    font-size: 20px;
+    padding: 25px 0;
+    @include mixin.mq() {
+      padding: 15px 0;
+    }
+  }
+  &__subtitle {
+    font-size: 25px;
+    color: #316745;
   }
 }
 
 /**************************
 地図部分
 ***************************/
-.c-Access {
-  &-wrapper {
+.l-Access {
+  &__wrapper {
+    height: auto;
+  }
+}
+.p-Access {
+  &__container {
     background-image: url(../images/map.png);
     position: relative; //layerに対しての親
-    height: 100%;
+    height: 691px;
     width: 100%;
+    @include mixin.mq() {
+      height: 415px;
+    }
+    @include mixin.mq(l) {
+      height: 649px;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -157,14 +298,21 @@
       bottom: 0;
       left: 0;
       background-color: black;
-      opacity: 0.5;
+      opacity: 0.6;
     }
   }
-  &-title {
+}
+.c-Access {
+  &__title {
     color: #707070;
+    padding: 20px;
   }
-  &-txt {
+  &__txt {
+    color: #fff;
     padding: 5rem;
+    @include mixin.mq(l) {
+      width: 50%;
+    }
   }
 }
 
@@ -172,14 +320,16 @@
 フッター
 ***************************/
 .l-Footer {
-  &-wrapper {
+  &__wrapper {
     text-align: center;
     background-image: url(../images/footer-background.png);
     background-size: cover;
     background-position: center top;
     height: 150px;
   }
-  &-container {
+}
+.p-Footer {
+  &__container {
     height: 150px;
     width: 100%;
     display: flex;
@@ -187,14 +337,17 @@
     justify-content: center;
     flex-direction: column;
     }
-  &-list {
+  &__list {
     display: inline-block;
     list-style: none;
     display: flex;
     position: relative;
     justify-content: center;
-    &-item {
-      +li {
+  }
+}
+.c-Footer {
+  &__list-item {
+    +li {
       &::before {
         position: absolute;
         display: block;
@@ -211,4 +364,3 @@
     }
     }
   }
-}

@@ -8,38 +8,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--css-->
 <link rel="stylesheet" href="css/style.css">
+
+
+<!--CDN読み込み-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+
 </head>
+
 
 <body>
 
+<div class="l__Wrapper"> <!--大枠-->
+  <div class="p__Container">
+
+<!--▽▽ヘッダー▽▽-->
 <header class="l-Header">
   <div class="p-Header__wrapper">
-    <nav class="p-Header__nav">
-      <button class="c-Header__nav-btn-menu">Menu</button>
-      <!--ナビゲーションメニューは後から作成-->
-      <ul class="menu-nav">
-        <li><a href="#">バーガー</a></li>
-        <li><a href="#">バーガー</a></li>
-        <li><a href="#">バーガー</a></li>
-      </ul>
-      <!--ナビゲーションメニューは後から作成-->
-    </nav>
-    <div class="p-Header__container">
       <h1 class="c-Header__title">Hamburger</h1>
       <div class="p-Search__container">
         <from action="サイトurl" method="get">
-        <input type="search" name="search" placeholder="">
-        <input type="submit" value="submit" value="検索">
-      </div>
-    </div>
-  </div>
+        <input type="search" name="search" placeholder="" class="c-Serch__input-field">
+        <input type="submit" value="検索" class="c-Serch__btn">
+      </div> <!--p-Search__container-->
+  </div> <!--p-Header__wrapper-->
 </header>
 
 <main class="l-Main">
 <div class="c-Hero">
     <img src="./images/hero-images.jpg">
 </div>
+<!--△△ヘッダー△△-->
 
+<!--▽▽カード▽▽-->
 <!--Card-->
 <div class="l-Card__wrapper">
 <div class="p-Card__container">
@@ -52,10 +54,10 @@
         <h3 class="c-Card__subtitle">Take Out</h3>
         <p class="c-Card__txt">当店のテイクアウトで利用できる商品を掲載しています</p>
       </div>
-    <div class="p-Card__sub-container">
-      <h3 class="c-Card__subtitle">Take Out</h3>
-      <p class="c-Card__txt">当店のテイクアウトで利用できる商品を掲載しています</p>
-    </div>
+      <div class="p-Card__sub-container">
+        <h3 class="c-Card__subtitle">Take Out</h3>
+        <p class="c-Card__txt">当店のテイクアウトで利用できる商品を掲載しています</p>
+      </div>
     </div> <!--c-Card__sub-wrapper-->
   </div> <!--c-Card__img-->
 </div><!--p-Card__container-->
@@ -79,14 +81,16 @@
 </div><!--p-Card__container-->
 
 </div> <!--l-Card__wrapper-->
+<!--△△カード△△-->
 
 </main>
 
-<section>
-  <div class="c-Access-wrapper">
-    <div class="c-Access-layer"></div>
-    <h2 class="c-Access-title">見出しが入ります</h2>
-    <p class="c-Access-txt">
+<!--▽▽地図エリア▽▽-->
+<section class="l-Access__wrapper">
+  <div class="p-Access__container">
+    <div class="c-Access__layer"></div>
+    <h2 class="c-Access__title">見出しが入ります</h2>
+    <p class="c-Access__txt">
       テキストが入ります。テキストが入ります。テキストが入ります。
       テキストが入ります。テキストが入ります。テキストが入ります。
       テキストが入ります。テキストが入ります。テキストが入ります。
@@ -100,19 +104,93 @@
     </p>
   </div>
 </section>
+</div> <!--p-Container-->
+<!--△△地図エリア△△-->
+
+
+<!--開閉用ボタン-->
+<button class="c-Sidebar__nav-btn-menu">Menu</button>
+
+<!--サイドバーメニュー▽▽-->
+<div class="p-Sidebar_layer"><!--▽▽layer▽▽-->
+  <nav class="p-Sidebar__nav">
+    <!--ナビゲーションメニューは後から作成-->
+    <ul class="menu-nav">
+      <li>
+        <a href="#" class="c-Sidebar__List">バーガー</a>
+          <ul>
+            <li><a href="#" class="c-Sidebar__ListItem">ハンバーガー</a></li>
+            <li><a href="#" class="c-Sidebar__ListItem">チーズバーガー</a></li>
+            <li><a href="#" class="c-Sidebar__ListItem">テリヤキバーガー</a></li>
+            <li><a href="#" class="c-Sidebar__ListItem">アボカドバーガー</a></li>
+            <li><a href="#" class="c-Sidebar__ListItem">フィッシュバーガー</a></li>
+            <li><a href="#" class="c-Sidebar__ListItem">ベーコンバーガー</a></li>
+            <li><a href="#" class="c-Sidebar__ListItem">チキンバーガー</a></li>
+          </ul>
+      </li>
+      <li>
+        <a href="#" class="c-Sidebar__List">サイド</a>
+        <ul>
+          <li><a href="#" class="c-Sidebar__ListItem">ポテト</a></li>
+          <li><a href="#" class="c-Sidebar__ListItem">サラダ</a></li>
+          <li><a href="#" class="c-Sidebar__ListItem">ナゲット</a></li>
+          <li><a href="#" class="c-Sidebar__ListItem">コーン</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="c-Sidebar__List">ドリンク</a>
+      <ul>
+        <li><a href="#" class="c-Sidebar__ListItem">コーラ</a></li>
+        <li><a href="#" class="c-Sidebar__ListItem">ファンタ</a></li>
+        <li><a href="#" class="c-Sidebar__ListItem">オレンジ</a></li>
+        <li><a href="#" class="c-Sidebar__ListItem">アップル</a></li>
+        <li><a href="#" class="c-Sidebar__ListItem">紅茶(Ice/Hot)</a></li>
+        <li><a href="#" class="c-Sidebar__ListItem">コーヒー(Icw/Hot)</a></li>
+      </ul>
+      </li>
+    </ul>
+    <!--ナビゲーションメニューは後から作成-->
+  </nav>
+</div><!--△△layer△△-->
+<!--サイドバーメニュー△△-->
+</div> <!--wrapper-->
+
 
 <!--フッター▽▽-->
 <fotter>
-  <div class="l-Footer-wrapper">
-    <div class="l-Footer-container">
-      <ul class="l-Footer-list">
-        <li class="l-Footer-list-item"><a href="#">ショップ情報</a></li>
-        <li class="l-Footer-list-item"><a href="#">ヒストリー</a></li>
+  <div class="l-Footer__wrapper">
+    <div class="p-Footer__container">
+      <ul class="p-Footer__list">
+        <li class="c-Footer__list-item"><a href="#">ショップ情報</a></li>
+        <li class="c-Footer__list-item"><a href="#">ヒストリー</a></li>
       </ul>
-      <p class="l-Footer-copyright">Copyright: RaiseTech</p>
+      <p class="c-Footer__copyright">Copyright: RaiseTech</p>
     </div>
   </div><!--l-Footer-wrapper-->
 </fotter>
 <!--フッター△△-->
+
+<!--JavaSquript記載-->
+<script>
+  const btn = document.querySelector('.c-Sidebar__nav-btn-menu');
+  const nav = document.querySelector('.p-Sidebar__nav');
+
+
+  btn.addEventListener('click', () => {
+    if (window.matchMedia("(max-width: 1280px)").matches) {
+    /*ウィンドウサイズが1280px以下の場合に有効にしたい処理*/
+    nav.classList.toggle('open-menu')
+
+    /*▽▽ボタンを切り替える記述▽▽*/
+    if (btn.innerHTML === 'Menu') {
+      btn.innerHTML = '×';
+    } else {
+      btn.innerHTML = 'Menu';
+    }
+    /*△△ボタンを切り替える記述△△*/
+  }});
+</script>
+
 </body>
+
 </html>
