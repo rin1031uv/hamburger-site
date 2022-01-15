@@ -1,0 +1,25 @@
+.p-Header {
+ &__wrapper {
+   height: 217px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-color: #fff7ef;
+   @include mixin.mq(l) {
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0 20px;
+   }
+ }
+}
+
+.p-Search {
+ &__container {
+   text-align: center;
+   input {
+     border-radius: 10px;
+     box-shadow: none;
+   }
+ }
+}

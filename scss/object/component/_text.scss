@@ -1,0 +1,23 @@
+/*****************
+カード
+******************/
+&__txt {
+  font-size: 20px;
+  padding: 25px 0;
+  @include mixin.mq() {
+    padding: 15px 0;
+  }
+}
+
+/*****************
+地図
+******************/
+.c-Access {
+  &__txt {
+    color: #fff;
+    padding: 20px;
+    @include mixin.mq(l) {
+      width: 50%;
+    }
+  }
+}

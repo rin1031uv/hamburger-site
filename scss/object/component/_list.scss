@@ -1,0 +1,65 @@
+
+/**************************
+サイドバーメニュー
+***************************/
+.c-Sidebar {
+  &__List {
+    font-size: 2.4rem;
+    height: 100%;
+    &Item {
+      font-size: 2rem;
+      padding-left: 20px;
+    }
+  }
+}
+
+.menu-nav { //ul
+  width: calc(100% - 47px);
+  margin-left: auto;
+  background-color: #fff7ef;
+  padding: 80px 30px;
+  @include mixin.mq(l) {
+    display: block;
+    width: 100%;
+    height: 2843px;
+  }
+  li {
+    margin: 2rem 0;
+    list-style: none;
+    z-index: 400;
+    a {
+      display: block;
+    }
+  }
+}
+
+.open-menu {
+  width: 100%;
+  @include mixin.mq(l) {
+    display: none;
+  }
+}
+
+
+/*****************
+フッター
+******************/
+.c-Footer {
+  &__list-item {
+    +li {
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 50%;
+        height: 14px;
+        margin-top: -7px;
+        border-right: 1px solid #707070;
+      }
+    }
+    a {
+      padding: 10px;
+      display: block;
+    }
+  }
+}

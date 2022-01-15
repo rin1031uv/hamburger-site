@@ -1,0 +1,22 @@
+body {
+ height: 2716px;
+ @include mixin.mq() {
+   height: 1826px;
+ }
+ @include mixin.mq(l) {
+   height: 2829px;
+ }
+}
+
+.l__Wrapper {
+ @include mixin.mq(l) {
+ display: flex; //サイドバーとメインを並べる
+ width: 100%;
+ }
+}
+
+.p__Container {
+ @include mixin.mq(l){
+ width: calc(100% - 356px); //サイドバー356px
+ }
+}

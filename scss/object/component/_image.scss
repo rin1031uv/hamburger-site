@@ -1,0 +1,39 @@
+/*****************
+hero画像
+******************/
+.c-Hero {
+  img {
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  @include mixin.mq(l) {
+    height: 530px;
+    object-fit: cover;
+  }
+  }
+}
+
+/*****************
+カード
+******************/
+.c-Card {
+  &__img {
+    position: relative; //titleに対しての親
+    @include mixin.mq(l) {
+      height: 100%;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 642px;
+      object-fit: cover;
+      @include mixin.mq() {
+        height: 681px;
+      }
+      @include mixin.mq(l) {
+        height: 100%;
+      }
+    }
+  }
+}

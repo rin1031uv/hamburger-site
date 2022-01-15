@@ -1,0 +1,12 @@
+/**************************
+地図エリア
+***************************/
+.l-Access {
+ &__wrapper {
+   height: auto;
+   width: 100%;
+   @include mixin.mq(l) {
+     height: 649px;
+   }
+ }
+}
