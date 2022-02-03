@@ -1,4 +1,4 @@
-@use "../component/import";
+@use "../global" as g;
 
 .p-Access {
   &__container {
@@ -6,10 +6,10 @@
     position: relative; //layerに対しての親
     height: 691px;
     width: 100%;    
-    @include mixin.mq() {
+    @include g.mq() {
       height: 415px;
     }
-    @include mixin.mq(l) {
+    @include g.mq(l) {
       height: 649px;
     }
     &::before {
@@ -22,10 +22,10 @@
       background: rgba(0, 0, 0, 0.3);
       z-index: 0;
       display: block;
-      @include mixin.mq() {
+      @include g.mq() {
         bottom: 0;
       }
-      @include mixin.mq(l) {
+      @include g.mq(l) {
         right: calc(100% - 603px);
       }
     }

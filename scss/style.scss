@@ -3,8 +3,28 @@
 /**************************
 読み込み
 ***************************/
-@use "./foundation/import";
-@use "./object/project/import";
-@use "./layout/import";
+@use "foundation";
+@use "global";
 
+//layout
+@use "layout/body";
+@use "layout/header";
+@use "layout/main";
+@use "layout/section";
+@use "layout/footer" as lf;
+
+//component
+@use "component/button";
+@use "component/image";
+@use "component/list";
+@use "component/serch";
+@use "component/text";
+@use "component/title";
+@use "component/border";
+
+//project
+@use "project/card";
+@use "project/sidebar";
+@use "project/access";
+@use "project/footer" as pf;
 

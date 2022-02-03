@@ -1,3 +1,5 @@
+@use "../global" as g;
+
 /**************************
 地図エリア
 ***************************/
@@ -5,7 +7,7 @@
  &__wrapper {
    height: auto;
    width: 100%;
-   @include mixin.mq(l) {
+   @include g.mq(l) {
      height: 649px;
    }
  }

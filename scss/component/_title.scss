@@ -1,0 +1,54 @@
+/*****************
+ヘッダー
+******************/
+.c-Header {
+  &__title {
+  color: #707070;
+  text-align: center;
+  }
+}
+
+/*****************
+hero画像
+******************/
+.c-Main {
+  &__title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+  }
+}
+/*****************
+カード
+******************/
+.c-Card {
+  &__title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3c2a10;
+    padding-left: 10px;
+    padding-top: 20px;
+  }
+}
+
+/*****************
+地図
+******************/
+.c-Access {
+  &__title {
+    color: #fff;
+    padding-left: 42px;
+    padding-top: 40px;
+  }
+}

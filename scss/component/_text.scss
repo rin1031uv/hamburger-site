@@ -1,0 +1,28 @@
+@use "../global" as g;
+/*****************
+カード
+******************/
+.c-Card {
+  &__txt {
+    font-size: 20px;
+    padding-left: 10px;
+    @include g.mq() {
+      padding: 15px 0;
+    }
+  }
+}
+
+/*****************
+地図
+******************/
+.c-Access {
+  &__txt {
+    color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    @include g.mq(l) {
+      width: 50%;
+    }
+  }
+}

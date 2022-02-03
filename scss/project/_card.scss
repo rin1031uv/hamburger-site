@@ -1,0 +1,62 @@
+@use "../global" as g;
+
+/*
+カード
+***************************/
+.l-Card {
+  &__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    @include g.mq() {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+  }
+  > .p-Card__container {
+    width: calc(100% / 2);
+    margin-right: 20px;
+  }
+}
+.p-Card {
+  &__container {
+    width: 100%;
+    padding: 20px;
+    @include g.mq() {
+      //padding-top: 39px;
+      //margin-bottom: 39px;
+      position: relative;
+    }
+    @include g.mq(l) {
+      //height: 1196px;
+    }
+  }
+  &__sub-wrapper {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    //top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include g.mq() {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+  &__sub-container {
+    background-color: rgba(255, 255, 255, 0.5);//白半透明
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 163px;
+    @include g.mq() {
+    }
+    @include g.mq(l) {
+      height: 174px;
+    }
+  }
+}

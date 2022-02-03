@@ -1,0 +1,30 @@
+@use "../global" as g;
+
+/*****************
+地図
+******************/
+.c-Access {
+ &__boder {
+  width: 75px;
+  border-bottom: 2px solid #fff;
+  margin-left: 40px;
+  margin-top: 20px;
+ }
+}
+
+.c-Card {
+ &__boder {
+  width: 32.5px;
+  border-bottom: 4px solid #fff;
+  margin-left: 13.5px;
+  margin-top: 20px;
+  position: absolute;
+  top: 86px;
+  @include g.mq() {
+   width: 36px;
+  }
+  @include g.mq(l) {
+   width: 63px;
+  }
+ }
+}

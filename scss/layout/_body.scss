@@ -1,22 +1,14 @@
-body {
- height: 2716px;
- @include mixin.mq() {
-   height: 1826px;
- }
- @include mixin.mq(l) {
-   height: 2829px;
- }
-}
+@use "../global" as g;
 
-.l__Wrapper {
- @include mixin.mq(l) {
- display: flex; //サイドバーとメインを並べる
+.l-Wrapper {
+ @include g.mq(l) {
+ display: flex; //サイドバーとメインを並べる（子要素の高さは同じになる）
  width: 100%;
  }
 }
 
-.p__Container {
- @include mixin.mq(l){
+.p-Container {
+ @include g.mq(l){
  width: calc(100% - 356px); //サイドバー356px
  }
 }

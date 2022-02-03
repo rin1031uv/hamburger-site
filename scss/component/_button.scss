@@ -1,3 +1,5 @@
+@use "../global" as g;
+
 /*****************
 ヘッダー
 ******************/
@@ -15,15 +17,22 @@
     background-color: transparent;//ボタン背景透明
     color: #707070;
     border: none;
-    height: 32px;
+    //height: 32px;
     width: 100px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 14px;
+    right: 16px;
     z-index: 2000;
     font-size: 3rem;
-    @include mixin.mq(l) {
-    right: 256px;
+    @include g.mq() {
+      position: absolute;
+      top: 18px;
+      right: 26px;
+    }
+    @include g.mq(l) {
+      position: absolute;
+      top: 82px;
+      right: 235px;
     }
   }
 }
